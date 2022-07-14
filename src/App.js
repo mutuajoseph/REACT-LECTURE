@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import CreateTask from './components/CreateTask';
+import Navbar from './components/Navbar';
+import TaskList from './components/TaskList';
+
+const tasks = [
+  {
+    title: "Visit the market",
+    isCompleted: false,
+  },
+  {
+    title: "Watch a react video",
+    isCompleted: false,
+  },
+  {
+    title: "Attend a react lecture",
+    isCompleted: false,
+  },
+  {
+    title: "Go for a swim",
+    isCompleted: false,
+  }
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <CreateTask />
+      <TaskList tasks={tasks} />
     </div>
   );
 }

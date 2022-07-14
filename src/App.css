@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar--wrapper {
+    height: 10vh;
+    background: blue;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar--items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input--wrapper {
+    display: flex;
+    gap: 6px;
+    width: 50vw;
+    margin: 4rem auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input--wrapper input {
+    width: 80%;
+    outline: none;
+    padding: .5rem;
+    font-size: 2rem;
+    border: none;
+    border-bottom: 1px solid #111;
 }
 
-.App-link {
-  color: #61dafb;
+.input--wrapper button {
+    width: 20%;
+    outline: none;
+    background: rgb(52, 98, 206);
+    border: none;
+    color: #fff;
+    font-weight: 800;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tasklist--wrapper {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.tasklist--wrapper > div {
+    border-radius: 6px;
+    border-left: 6px solid rgb(54, 107, 224);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: .5rem 0;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    padding: 0 .5rem;
+}
+
+.task--item {
+    display: flex;
+    justify-content: space-between;
 }
